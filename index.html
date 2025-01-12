@@ -2,15 +2,18 @@
 <html lang="en">
 
 <head>
+
+   <!-- Favicons -->
+   <link href="assets/img/faviconOrginal.png" rel="icon">
+   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Eleel Trading Company</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+ 
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -135,11 +138,45 @@
         <div class="container">
           <div class="row gy-4">
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/about-spices.jpg" class="img-fluid mb-4" alt="About Our Spices">
-              <div class="contact-info">
+              <div class="turmeric-overlay">
+              <img src="assets/img/turmeric.png" class="img-fluid mb-4" alt="About Our Spices">
+              </div>
+
+              <!-- Add CSS for Styling -->
+<style>
+  /* Hero Section Styling */
+  #hero {
+    position: relative;
+    overflow: hidden;
+    background-color: #fdfaf5; /* Light background color */
+  }
+
+  /* Clove Leaf Drawing */
+  .turmeric-overlay{
+    position: relative;
+    top: 5;
+    left: 5;
+    z-index: 10; /* Behind other elements */
+    width: 100%; /* Scale the drawing */
+    max-width: 1000px; /* Set a maximum size */
+    pointer-events: none; /* Prevent interaction */
+  }
+
+  .turmeric-overlay img {
+    width: 100%; /* Responsive sizing */
+    height: auto;
+  }
+
+  /* Ensure text and primary content remain above the overlay */
+  #hero .container, #hero .hero-img {
+    position: relative;
+    z-index: 1; /* Above overlay */
+  }
+</style>
+              <!-- <div class="contact-info">
                 <h3>Contact Us</h3>
                 <p>+1 123 456 7890</p>
-              </div>
+              </div> -->
             </div>
             <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
               <div class="content ps-0 ps-lg-5">
@@ -166,15 +203,79 @@
       </section><!-- /About Section -->
   
 
-    <!-- Why Us Section -->
+<!-- Why Us Section -->
 <section id="why-us" class="why-us section light-background">
+  <style>
+    /* General Styling */
+    .why-us {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+    }
+
+    /* Curved Box Styling */
+    .curved-box {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover Effect */
+    .curved-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Why Box Specific */
+    .why-box {
+      text-align: left;
+    }
+
+    /* Icon Box Specific */
+    .icon-box {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .icon-box i {
+      font-size: 3rem;
+      color: #ff5722;
+      margin-bottom: 10px;
+    }
+
+    .icon-box h4 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .icon-box p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Button Styling */
+    .more-btn {
+      display: inline-block;
+      margin-top: 20px;
+      color: #fff;
+      background-color: #ff5722;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .more-btn:hover {
+      background-color: #e64a19;
+    }
+  </style>
 
   <div class="container">
-
     <div class="row gy-4">
-
       <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="why-box">
+        <div class="why-box curved-box">
           <h3>Why Choose Eleel Trading Company</h3>
           <p>
             At Eleel Trading Company, we are committed to delivering the finest spices sourced directly from trusted farms. With a focus on quality and authenticity, we ensure that our spices bring unmatched flavor and aroma to every dish.
@@ -187,9 +288,8 @@
 
       <div class="col-lg-8 d-flex align-items-stretch">
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
-
           <div class="col-xl-4">
-            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+            <div class="icon-box d-flex flex-column justify-content-center align-items-center curved-box">
               <i class="bi bi-clipboard-data"></i>
               <h4>Premium Quality</h4>
               <p>We adhere to stringent quality checks to ensure our spices meet international standards.</p>
@@ -197,7 +297,7 @@
           </div><!-- End Icon Box -->
 
           <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+            <div class="icon-box d-flex flex-column justify-content-center align-items-center curved-box">
               <i class="bi bi-gem"></i>
               <h4>Global Reach</h4>
               <p>Our spices are exported to clients worldwide, ensuring fresh flavors in every corner of the globe.</p>
@@ -205,21 +305,18 @@
           </div><!-- End Icon Box -->
 
           <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+            <div class="icon-box d-flex flex-column justify-content-center align-items-center curved-box">
               <i class="bi bi-inboxes"></i>
               <h4>Custom Packaging</h4>
               <p>We provide customizable packaging solutions to meet the unique needs of our clients.</p>
             </div>
           </div><!-- End Icon Box -->
-
         </div>
       </div>
-
     </div>
-
   </div>
-
 </section><!-- /Why Us Section -->
+
 
 <!-- Stats Section -->
 <section id="stats" class="stats section dark-background">
@@ -309,7 +406,7 @@
         <h2>TESTIMONIALS</h2>
         <p>What Are They <span class="description-title">Saying About Us</span></p>
       </div> End Section Title -->
-
+<!-- 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="swiper init-swiper">
@@ -352,8 +449,8 @@
                   </div>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
-
+            </div>End testimonial item -->
+<!-- 
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="row gy-4 justify-content-center">
@@ -376,7 +473,7 @@
                   </div>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div>End testimonial item -->
 
             <!-- <div class="swiper-slide">
               <div class="testimonial-item">
@@ -402,7 +499,7 @@
               </div>
             </div> End testimonial item -->
 
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="row gy-4 justify-content-center">
                   <div class="col-lg-6">
@@ -424,18 +521,18 @@
                   </div>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div>End testimonial item -->
 
-          </div>
+          <!-- </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
 
-    </section><!-- /Testimonials Section -->
+    </section>/Testimonials Section -->
 
     <!-- Events Section -->
-    <section id="events" class="events section">
+    <!-- <section id="events" class="events section">
 
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
 
@@ -473,48 +570,48 @@
               <p class="description">
                 Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.
               </p>
-            </div><!-- End Event item -->
+            </div>End Event item -->
 
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-2.jpg)">
+            <!-- <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-2.jpg)">
               <h3>Private Parties</h3>
               <div class="price align-self-start">$289</div>
               <p class="description">
                 In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.
               </p>
-            </div><!-- End Event item -->
-
+            </div>End Event item -->
+<!-- 
             <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-3.jpg)">
               <h3>Birthday Parties</h3>
               <div class="price align-self-start">$499</div>
               <p class="description">
                 Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
               </p>
-            </div><!-- End Event item -->
+            </div>End Event item -->
 
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-4.jpg)">
+            <!-- <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-4.jpg)">
               <h3>Wedding Parties</h3>
               <div class="price align-self-start">$899</div>
               <p class="description">
                 Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis.
               </p>
-            </div><!-- End Event item -->
+            </div>End Event item -->
 
-          </div>
+          <!-- </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
 
-    </section><!-- /Events Section -->
+    </section>/Events Section -->
 
     <!-- Chefs Section -->
-    <section id="chefs" class="chefs section">
+    <!-- <section id="chefs" class="chefs section"> -->
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <!-- <div class="container section-title" data-aos="fade-up">
         <h2>chefs</h2>
         <p><span>Our</span> <span class="description-title">Proffesional Chefs<br></span></p>
-      </div><!-- End Section Title -->
+      </div>End Section Title
 
       <div class="container">
 
@@ -537,9 +634,9 @@
                 <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
               </div>
             </div>
-          </div><!-- End Chef Team Member -->
+          </div>End Chef Team Member -->
 
-          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <!-- <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
                 <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
@@ -556,9 +653,9 @@
                 <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
               </div>
             </div>
-          </div><!-- End Chef Team Member -->
+          </div>End Chef Team Member -->
 
-          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+          <!-- <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
                 <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
@@ -575,21 +672,21 @@
                 <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
               </div>
             </div>
-          </div><!-- End Chef Team Member -->
-
+          </div>End Chef Team Member -->
+<!-- 
         </div>
 
       </div>
 
-    </section><!-- /Chefs Section -->
+    </section>/Chefs Section -->
 
       
 
-        </div>
+        <!-- </div>
 
       </div>
 
-    </section><!-- /Book A Table Section -->
+    </section>/Book A Table Section -->
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section light-background">
@@ -796,13 +893,13 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Yummy</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Eleel Trading Company</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://www.raastha.in/">Raastha</a>
       </div>
     </div>
 
